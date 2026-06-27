@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    volumes:
+      # El punto (.) significa "la carpeta actual donde está este archivo"
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    container_name: entorno-tdd-java
+    # Esto mantiene al contenedor corriendo siempre
+    tty: true
